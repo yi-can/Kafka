@@ -1,0 +1,15 @@
+Adım1:
+Topic, verilerin – mesajların gönderilip alındığı, kullanıcı tanımlı kategori ismidir.
+İlişkisel veritabanlarındaki tablolara benzetebiliriz, bir Kafka Cluster içerisinde binlerce topic olabilir.
+Bir topic oluştururken içerisindeki Partition ve Replication Factor sayısını belirtiriz.
+Partition:
+Partition, Kafka'nın veri yapısının temel bir bileşenidir. Bir topic, bir veya daha fazla partitiona bölünebilir.
+Partitionlar, Kafka'nın ölçeklenebilirliğini ve yüksek kullanılabilirliğini sağlar.
+Replication Factor:
+Kafka dağıtık(distrubuted) bir sistemdir, bir broker çökse bile veri kaybı olmaması ve işlemlerin devam ediyor olması gereklidir.
+Replikasyon bu işi yapar. Replication Factor genellikle 2 yada 3 olarak belirlenir, 2 olarak belirlenmesi biraz risklidir.
+Partition ve Replication Factor default değerleri 1'dir ve short veri tipnde ister.
+Adım2:
+KafkaTemplate:
+KafkaTemplate nesnesi mesajları göndermek için kullanılır. ProducerService sınıfı, KafkaTemplate sınıfının send(topic, msg)
+metodunu kullanarak, Kafka 'daki ilgili Topic'e ilgili mesajı gönderir.

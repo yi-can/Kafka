@@ -1,0 +1,28 @@
+server:
+  port: 4040
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27010
+      username: voco_task
+      password: root
+      database: vocoTask
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: 123456789
+
+
+jwt:
+  secretKey: ${secretKey}
+  issuer: ${issuer}
+
+kafka:
+  brokers: localhost:9092
